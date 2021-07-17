@@ -1,0 +1,20 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "My personal portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NodeJS",
+    "Express",
+    "React.js",
+    "MongoDB"
+  ],
+  "author": "Wilmar dos Santos",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
