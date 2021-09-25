@@ -7,11 +7,13 @@ app.use(bodyParser.json());
 
 const api = require('./backend/routes');
 
+/*
 app.get('/', (req, res) => {
     res.json({
         'success': true
     });
 });
+*/
 
 app.use('/api', api);
 
