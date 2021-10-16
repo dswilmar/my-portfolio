@@ -11,10 +11,12 @@ import Nav from './components/Nav';
 import AboutUs from './pages/AboutUs';
 import Portfolio from './pages/Portfolio';
 import ContactMe from './pages/ContactMe';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div>
+      <ScrollToTop />
       <GlobalStyle />
       <Nav/>     
       <Switch>

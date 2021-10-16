@@ -22,7 +22,7 @@ const Nav = () => {
                     <Link to="/">{navItems.about}</Link>
                 </li>
                 <li>
-                    <Link to="/porfolio">{navItems.portfolio}</Link>
+                    <Link to="/portfolio">{navItems.portfolio}</Link>
                 </li>
                 <li>
                     <Link to="/contact">{navItems.contact}</Link>
