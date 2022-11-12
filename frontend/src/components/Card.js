@@ -34,7 +34,7 @@ const Content = styled.div`
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
-    height: 100%;
+    height: 65vh;
 `;
 
 const Image = styled.img`

@@ -13,7 +13,7 @@ const Portfolio = () => {
             <CardList>
                 
                 {
-                    data?.data?.data?.map(item => {
+                    data?.data?.map(item => {
                         return (
                             <Card key={item._id} project={item} />
                         )
