@@ -12,6 +12,9 @@ const portfolioSchema = new Schema({
         type: String,
         required: true
     },
+    longDescription: {
+        type: String
+    },
     slug: {
         type: String,
         required: true,
