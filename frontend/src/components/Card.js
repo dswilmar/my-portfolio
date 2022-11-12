@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import moment from "moment";
 
 const Card = ({project}) => {    
 
@@ -10,7 +11,7 @@ const Card = ({project}) => {
                     <Image src={project.image} alt="" />
                     <Info>
                         <h3>{project.title}</h3>
-                        <h4>{project.createdAt}</h4>
+                        <h4>{moment(project.createdAt).format('MMM YYYY')}</h4>
                         <p>{project.description}</p>
                     </Info>
                 </Content>
