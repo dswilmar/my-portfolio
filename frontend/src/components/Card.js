@@ -7,7 +7,7 @@ const Card = ({project}) => {
         <>            
             <StyledCard key={project._id}>
                 <Content>
-                    <Image src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+                    <Image src={project.image} alt="" />
                     <Info>
                         <h3>{project.title}</h3>
                         <h4>{project.createdAt}</h4>
@@ -39,7 +39,7 @@ const Content = styled.div`
 
 const Image = styled.img`
     width: 100%;
-    height: 100%;
+    height: 65%;
 `;
 
 const Info = styled.div`

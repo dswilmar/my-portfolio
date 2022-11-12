@@ -18,6 +18,10 @@ const portfolioSchema = new Schema({
         unique: true,
         default: function() {return slug(this.title)}
     },
+    image: {
+        type: String,
+        required: true
+    },
     createdAt: {
         type: Date,
         default: Date.now()

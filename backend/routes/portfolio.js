@@ -6,7 +6,8 @@ router.post('/', async (req, res) => {
     
     const portfolio = new Portfolio({
         title: req.body.title,
-        description: req.body.description
+        description: req.body.description,
+        image: req.body.image
     });
 
     try {
@@ -63,7 +64,8 @@ router.put('/:slug', async (req, res) => {
             slug: req.params.slug
         },{
             title: req.body.title,
-            description: req.body.description
+            description: req.body.description,
+            image: req.body.image
         });
         res.json({
             success: true,
