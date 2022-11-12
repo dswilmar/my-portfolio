@@ -6,6 +6,11 @@ import { Switch, Route } from 'react-router-dom';
 //Styles
 import GlobalStyle from './components/GlobalStyle';
 
+//Icons
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faDatabase } from '@fortawesome/free-solid-svg-icons';
+
 //Components
 import Nav from './components/Nav';
 import AboutUs from './pages/AboutUs';
@@ -15,6 +20,9 @@ import ScrollToTop from './components/ScrollToTop';
 import PortfolioDetail from './components/PortfolioDetail';
 
 function App() {
+
+  library.add(fab, faDatabase);
+
   return (
     <div>
       <ScrollToTop />

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const PortfolioDetail = () => {
     return (
@@ -10,8 +11,9 @@ const PortfolioDetail = () => {
                     <p>Description</p>
                 </div>
                 <div>
+                    <h3>Tecnologias</h3>
                     <div>
-                        Plataformas/Tecnologias
+                        <FontAwesomeIcon icon={["fab", "github-square"]} size="4x" />                        
                     </div>
                 </div>
             </Stats>
@@ -34,6 +36,7 @@ const Detail = styled.div`
     top: 15%;
     margin-bottom: 10%;
     z-index: 10;
+    border-radius: 3px;
 `;
 
 const Stats = styled.div`
