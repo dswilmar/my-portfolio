@@ -1,27 +1,43 @@
 import React from 'react';
 import styled from "styled-components";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useParams } from "react-router-dom";
+import { useApi } from '../hooks/useApi';
 
 const PortfolioDetail = () => {
+
+    const { slug } = useParams();
+    const { data } = useApi(`/portfolio/${slug}`);
+
     return (
         <Detail>
             <Stats>
                 <div>
-                    <div>Title</div>
-                    <p>Description</p>
+                    <Title>{data?.data?.title}</Title>
+                    <DescriptionShort>
+                        <p>{data?.data?.description}</p>
+                    </DescriptionShort>
                 </div>
-                <div>
+                <Info>
                     <h3>Tecnologias</h3>
-                    <div>
-                        <FontAwesomeIcon icon={["fab", "github-square"]} size="4x" />                        
-                    </div>
-                </div>
+                    <Technolgies>                    
+                        <Technology>
+                            <FontAwesomeIcon icon={["fab", "react"]} size="4x" /> ReactJS                       
+                        </Technology>
+                        <Technology>                    
+                            <FontAwesomeIcon icon={["fas", "database"]} size="4x" /> MongoDB
+                        </Technology>
+                        <Technology>
+                            <FontAwesomeIcon icon={["fab", "node-js"]} size="4x" /> Node
+                        </Technology>
+                    </Technolgies>
+                </Info>
             </Stats>
             <Description>
                 <p>Long description</p>
             </Description>
             <div>
-                Imagem
+                <img src={data?.data?.image} />
             </div>
         </Detail>
     )
@@ -37,6 +53,11 @@ const Detail = styled.div`
     margin-bottom: 10%;
     z-index: 10;
     border-radius: 3px;
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 50vh;
+    }
 `;
 
 const Stats = styled.div`
@@ -50,6 +71,40 @@ const Description = styled.div`
     p {
         color: #000;
     }
+`;
+
+const DescriptionShort = styled(Description)`
+    padding: 0;
+`;
+
+const Info = styled.div`
+    text-align: center;
+    min-width: 300px;
+    h3 {
+        color: #696969;
+    }
+`;
+
+const Title = styled.h2`
+    color: #696969;
+`;
+
+const Technolgies = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+    svg {
+        color: #416CD5;
+    }
+`;
+
+const Technology = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #416CD5;
 `;
 
 export default PortfolioDetail;

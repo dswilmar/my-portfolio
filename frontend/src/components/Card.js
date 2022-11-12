@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import moment from "moment";
 
 const Card = ({project}) => {    
@@ -7,14 +8,16 @@ const Card = ({project}) => {
     return(
         <>            
             <StyledCard key={project._id}>
-                <Content>
-                    <Image src={project.image} alt="" />
-                    <Info>
-                        <h3>{project.title}</h3>
-                        <h4>{moment(project.createdAt).format('MMM YYYY')}</h4>
-                        <p>{project.description}</p>
-                    </Info>
-                </Content>
+                <Link to={`/portfolio/${project.slug}`}>
+                    <Content>
+                        <Image src={project.image} alt="" />
+                        <Info>
+                            <h3>{project.title}</h3>
+                            <h4>{moment(project.createdAt).format('MMM YYYY')}</h4>
+                            <p>{project.description}</p>
+                        </Info>
+                    </Content>
+                </Link>
             </StyledCard>
         </>
     )
