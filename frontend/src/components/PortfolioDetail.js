@@ -34,7 +34,7 @@ const PortfolioDetail = () => {
                 </Info>
             </Stats>
             <Description>
-                <p>Long description</p>
+                <p>{data?.data?.longDescription}</p>
             </Description>
             <div>
                 <img src={data?.data?.image} />
