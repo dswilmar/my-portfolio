@@ -31,6 +31,9 @@ const StyledCard = styled.div`
     text-align: center;
     cursor: pointer;
     overflow: hidden;
+    a {
+        text-decoration: none;
+    }
 `;
 
 const Content = styled.div`
