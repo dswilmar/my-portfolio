@@ -8,7 +8,8 @@ router.post('/', async (req, res) => {
         title: req.body.title,
         description: req.body.description,
         longDescription: req.body.longDescription,
-        image: req.body.image
+        image: req.body.image,
+        technologies: req.body.technologies
     });
 
     try {
@@ -67,7 +68,8 @@ router.put('/:slug', async (req, res) => {
             title: req.body.title,
             description: req.body.description,
             longDescription: req.body.longDescription,
-            image: req.body.image
+            image: req.body.image,
+            technologies: req.body.technologies
         });
         res.json({
             success: true,
