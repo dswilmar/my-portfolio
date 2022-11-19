@@ -20,16 +20,16 @@ const PortfolioDetail = () => {
                 </div>
                 <Info>
                     <h3>Tecnologias</h3>
-                    <Technolgies>                    
-                        <Technology>
-                            <FontAwesomeIcon icon={["fab", "react"]} size="4x" /> ReactJS                       
-                        </Technology>
-                        <Technology>                    
-                            <FontAwesomeIcon icon={["fas", "database"]} size="4x" /> MongoDB
-                        </Technology>
-                        <Technology>
-                            <FontAwesomeIcon icon={["fab", "node-js"]} size="4x" /> Node
-                        </Technology>
+                    <Technolgies>
+                        {
+                            data?.data?.technologies.map(tech => {
+                                return (
+                                    <Technology key={tech.icon}>
+                                        <FontAwesomeIcon icon={[tech.iconType, tech.icon]} size="4x" /> {tech.label}                       
+                                    </Technology>            
+                                )
+                            })
+                        }
                     </Technolgies>
                 </Info>
             </Stats>
